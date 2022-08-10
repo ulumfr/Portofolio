@@ -4,15 +4,16 @@
 :root {
     --header-height: 3.5rem;
   
-    /* ========== Colors ========== */
-    /* Color mode HSL(hue, saturation, lightness) */
-    /* https://www.w3schools.com/colors/colors_hsl.asp */
-    /*
+    /* ========== Colors ==========
+    Color mode HSL(hue, saturation, lightness)
+    https://www.w3schools.com/colors/colors_hsl.asp
+    
           Purple: hsl(250, 66%, 75%)
           Blue: hsl(207, 90%, 72%)
           Pink: hsl(356, 66%, 75%)
           Teal: hsl(174, 63%, 62%)
     */
+
     --first-hue: 30;
     --second-hue: 11;
     --sat: 66%;
@@ -26,8 +27,8 @@
     --body-color: hsl(var(--second-hue), 48%, 8%);
     --container-color: hsl(var(--second-hue), 32%, 12%);
   
-    /*========== Font and typography ==========*/
-    /*.5rem = 8px | 1rem = 16px ...*/
+    /* ========== Font and typography ==========
+    .5rem = 8px | 1rem = 16px ... */
     --body-font: 'Poppins', sans-serif;
     --biggest-font-size: 1.75rem;
     --h1-font-size: 1.5rem;
@@ -117,6 +118,7 @@ img {
 .ganti-mode:hover{
     color: var(--first-color);
 }
+
 /*========== Variables Light theme ==========*/
 body.light-theme{
     --title-color: hsl(var(--second-hue), 15%, 15%);
@@ -133,33 +135,41 @@ body.light-theme{
     background-color: hsl(var(--second-hue), 32%, 90%, .8);
 }
 
-.light-theme .section_subtitle, 
-.light-theme .home_social-link, 
-.light-theme .home_scroll, 
-.light-theme .footer_title,
-.light-theme .footer_link,
-.light-theme .footer_credit{
+.light-theme .section_subtitle{
     color: var(--title-color);
 }
 
 .light-theme .button{
+    color: #fff;
+} 
+.light-theme .footer_link{
     color: var(--body-color)
 }
 
-.light-theme .button:hover{
-    color: var(--text-color);
+.light-theme .home_social-link{
+    background-color: var(--first-color);
+    color: #fff;
 }
 
-.light-theme .home_social-link,
+.light-theme .button:hover, 
+.light-theme .footer_link:hover,
+.light-theme .footer_social-link:hover{
+    color: var(--title-color);
+}
+
+.light-theme .home_scroll:hover{
+    color: var(--title-color);
+    transform: translateY(.25rem);
+}
+
+.light-theme .home_social-link:hover{
+    color: var(--title-color);
+}
+
 .light-theme .contact_card{
     box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, .1);
 }
 
-.light-theme .home_social::after,
-.light-theme .footer_social-link{
-    background-color: var(--title-color);
-}
-  
 .light-theme::-webkit-scrollbar{
     background-color: hsl(var(--second-hue), 8%, 66%);
 }
@@ -230,6 +240,8 @@ body.light-theme{
     color: var(--first-color);
     font-weight: var(--font-medium);
     transition: .4s;
+    width: 40px;
+    height: 40px;
 }
 
 .nav_logo:hover{
@@ -289,7 +301,7 @@ body.light-theme{
 
 .home_one, .home_pend{
     font-size: var(--small-font-size);
-    font-weight: font var(--font-medium);
+    font-weight: var(--font-medium);
 }
 
 .home_one{
@@ -346,8 +358,8 @@ body.light-theme{
 
 .home_social-link{
     width: max-content;
-    background-color: var(--container-color);
-    color: var(--first-color);
+    background-color: var(--first-color);
+    color: var(--body-color);
     padding: .25rem;
     border-radius: .25rem;
     display: flex;
@@ -377,6 +389,11 @@ body.light-theme{
     justify-items: center;
 }
 
+.home_scroll:hover{
+    color: #fff;
+    transform: translateY(.25rem);
+}
+
 .home_scroll-icon{
     font-size: 1.25rem;
 }
@@ -386,7 +403,6 @@ body.light-theme{
     transform: rotate(-90deg);
 }
 
-  
 /*=============== BUTTONS ===============*/
 .button{
     display: inline-block;
@@ -399,8 +415,7 @@ body.light-theme{
 }
 
 .button:hover{
-    background-color: var(--first-color-alt);
-    color: var(--text-color);
+    color: #fff;
 }
 
 /*=============== ABOUT ===============*/
@@ -507,6 +522,7 @@ body.light-theme{
 .footer_title, .footer_link{
     color: var(--body-color);
 }
+
 .footer_title{
     text-align: center;
     margin-bottom: 2rem;
@@ -534,6 +550,11 @@ body.light-theme{
     display: inline-flex;
 }
 
+.footer_social-link:hover,
+.footer_link:hover{
+    color: #fff;
+}
+
 .footer_credit{
     display: block;
     margin-top: 4.5rem;
@@ -558,9 +579,8 @@ body.light-theme{
     background-color: hsl(var(--second-hue), 8%, 20%);
 }
 
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
+/* =============== BREAKPOINTS ===============
+For small devices */
 @media screen and (max-width: 320px) {
     .nav_menu{
         padding: 1rem 1.5rem;
