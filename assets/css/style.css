@@ -419,7 +419,17 @@ body.light-theme{
 }
 
 /*=============== ABOUT ===============*/
-  
+.about_container{
+    row-gap: 2.5rem;
+}
+
+.about_data{
+    text-align: center;
+}
+
+.about_description{
+    margin-bottom: 2rem;
+}
   
 /*=============== SKILLS ===============*/
   
