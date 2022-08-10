@@ -8,7 +8,7 @@
   <h3 align="center">Portfolio Website</h3>
 
   <p align="center">
-    Pembuatan Website Portofolio Ulum
+    Project Web Portofolio Ulum
     <br />
     <a href="https://ulumfr.github.io/Portofolio/">View Website</a>
   </p>
