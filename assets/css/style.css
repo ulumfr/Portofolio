@@ -135,7 +135,10 @@ body.light-theme{
     background-color: hsl(var(--second-hue), 32%, 90%, .8);
 }
 
-.light-theme .section_subtitle{
+.light-theme .section_subtitle,
+.light-theme .about_description,
+.light-theme .about_sub,
+.light-theme .contact_card-data{
     color: var(--title-color);
 }
 
@@ -149,6 +152,10 @@ body.light-theme{
 .light-theme .home_social-link{
     background-color: var(--first-color);
     color: #fff;
+}
+
+.light-theme .contact_card, .light-theme .about_box{
+    box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, .1);
 }
 
 .light-theme .button:hover, 
@@ -166,10 +173,6 @@ body.light-theme{
     color: var(--title-color);
 }
 
-.light-theme .contact_card{
-    box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, .1);
-}
-
 .light-theme::-webkit-scrollbar{
     background-color: hsl(var(--second-hue), 8%, 66%);
 }
@@ -181,7 +184,6 @@ body.light-theme{
 .light-theme::-webkit-scrollbar-thumb:hover{
     background-color: hsl(var(--second-hue), 8%, 44%);
 }
-
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
     max-width: 968px;
@@ -421,39 +423,77 @@ body.light-theme{
 /*=============== ABOUT ===============*/
 .about_container{
     row-gap: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about_img{
+    border-radius: 2rem;
+    justify-self: center;
 }
 
 .about_data{
-    text-align: center;
+    text-align: justify;
 }
 
 .about_description{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.about_title1{
+    text-align: center;
+    font-size: var(--h2-font-size);
+    margin-bottom: 1rem;
+}
+
+.about_info{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 350px;
+    justify-content: center;
+}
+
+.about_box{
+    background-color: var(--container-color);
+    padding: 1.03rem;
+    border-radius: .75rem;
+    text-align: center;
+}
+
+.about_title{
+    text-align: center;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.about_sub{
+    font-size: var(--small-font-size);
+    display: block;
+    margin-bottom: .35rem;
+}
+
+.about_button{
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .25rem;
 }
   
+.about_button:hover{
+    transform: translateX(.25rem);
+}
+
+.about_button-icon{
+    font-size: 1rem;
+    transition: .4s;
+}
+
 /*=============== SKILLS ===============*/
   
-  
-/*=============== SERVICES ===============*/
-  
-  
-/* Services modal */
-  
-  
-/*Active modal*/
-  
-  
-/*=============== WORK ===============*/
-  
-  
-/* Active item work*/
-  
-  
-/*=============== TESTIMONIAL ===============*/
-  
-  
-/* Swiper class */
-  
+/*=============== PORTOFOLIO ===============*/
   
 /*=============== CONTACT ===============*/
 
@@ -609,9 +649,27 @@ For small devices */
         width: 130px;
     }
 
-    /* .about_info{
-        grid-template-columns: repeat(2, 1fr);
+    .about_container{
+        display: inline;
+        justify-content: center;
     }
+
+    .about_info{
+        justify-content: center;
+        grid-template-columns: repeat(1, 1fr)
+    }
+    
+    .about_description{
+        text-align: center;
+        padding: 0 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .about_img{
+        width: 220px;
+        height: 300px;
+    }
+    /* .
 
     .skills_box{
         column-gap: 1rem;
